@@ -1,0 +1,11 @@
+server:
+  port: ${SERVER_PORT:80}
+
+spring:
+  profiles:
+    active:
+      group:
+        - prod
+  data:
+    mongodb:
+      uri: mongodb+srv://${MONGO_ADMIN}:${MONGO_PASSWORD}@${MONGO_HOST}/simian-api?retryWrites=true&w=majority

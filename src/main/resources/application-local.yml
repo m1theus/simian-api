@@ -1,0 +1,12 @@
+server:
+  port: ${SERVER_PORT:1337}
+
+spring:
+  profiles:
+    active:
+      group:
+        - local
+  data:
+    mongodb:
+      host: ${MONGO_HOST:localhost}
+      port: ${MONGO_PORT:27017}

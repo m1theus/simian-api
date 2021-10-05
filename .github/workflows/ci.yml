@@ -38,8 +38,7 @@ jobs:
 
       - name: Tests
         run: ./gradlew test
-      - name: Run Test Coverage
-
+        
       - name: Upload test report directory
         uses: actions/upload-artifact@v2
         if: always()
@@ -47,9 +46,9 @@ jobs:
           name: testDebugStuff
           path: build/reports/tests/test/
           if-no-files-found: warn
-
+      
+      - name: Run Test Coverage
         run: ./gradlew jacocoTestReport
-      - name: Generate JaCoCo Badge
 
       - name: Generate JaCoCo Badge
         id: jacoco
@@ -62,6 +61,7 @@ jobs:
         run: |
           echo "coverage = ${{ steps.jacoco.outputs.coverage }}"
           echo "branch coverage = ${{ steps.jacoco.outputs.branches }}"
+          
       - name: Add new badge
         uses: EndBug/add-and-commit@v7
         with:

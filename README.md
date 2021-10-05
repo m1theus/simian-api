@@ -1,4 +1,6 @@
-# simian-api [![CI](https://github.com/m1theus/simian-api/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/m1theus/simian-api/actions/workflows/ci.yml)
+# simian-api [![CI](https://github.com/m1theus/simian-api/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/m1theus/simian-api/actions/workflows/ci.yml) ![Coverage](.github/badges/jacoco.svg) ![Branches](.github/badges/branches.svg)
+
+
 
 Api responsável por identificar se uma sequência de DNA pertence a um humano ou um símio.
 
